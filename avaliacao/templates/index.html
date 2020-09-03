@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSC</title>
+</head>
+<body>
+<form id="container" action="{% url 'home' %}" method="POST">
+    {% csrf_token %}
+    <div>
+        Nome: <input type="text" id="nome" name="nome" maxlength="100">
+    </div>
+    RSC: <select name="rsc">
+    <option value="1">RSC I</option>
+    <option value="2">RSC II</option>
+    <option value="3">RSC III</option>
+</select>
+    <div>
+        Data do título necessário: <input type="date" id="data" name="data">
+    </div>
+
+    <input type="submit" value="OK">
+</form>
+
+
+</body>
+</html>
